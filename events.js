@@ -1,56 +1,40 @@
-var art = document.getElementsByClassName("article-section");
-var out = document.getElementById("output-target");
-var guineaPig = document.getElementById("guinea-pig");
-var btnColor = document.getElementById("add-color");
-var btnLarge = document.getElementById("make-large");
-var btnBorder = document.getElementById("add-border");
-var btnRounding = document.getElementById("add-rounding");
-var keyPress = document.getElementById("keypress-input");
-var pageTitle = document.getElementById("page-title");
-var mirror = document.getElementById("output-target");
-// click for sec
-for (var i = 0; i < art.length; i++){
-	art[i].addEventListener("click", function(){
-		out.innerHTML = this.innerHTML; 
-	})
+var art = document.getElementsByClassName("article-section ");
+var out = document.getElementById("output-target ");
+var guineaPig = document.getElementById("guinea-pig ");
+var btnColor = document.getElementById("add-color ");
+var btnLarge = document.getElementById("make-large ");
+var btnBorder = document.getElementById("add-border ");
+var btnRounding = document.getElementById("add-rounding ");
+
+for (var i = 0; i < art.length; i++) {
+    art[i].addEventListener("click", function() {
+        out.innerHTML = this.innerHTML;
+    })
 }
-// change h1 mouseover
-function changeText(text)
-        {
-            var display = document.getElementById('text-display');
-            display.innerHTML = "";
-            display.innerHTML = text;
-        }
-function changeback(text)
-        {
-            var display = document.getElementById('text-display');
-            display.innerHTML = "";
-            display.innerHTML = text;
-        }
+
+var pageTitle = document.getElementById("page-title ");
+console.log(pageTitle);
 pageTitle.addEventListener("mouseover", function(event) {
-	changeText('You moved your mouse over the header');
-	
+    out.innerHTML = "You moved your mouse over the header";
 })
 pageTitle.addEventListener("mouseout", function(event) {
-	changeText('You left me!!');
-	
+    out.innerHTML = "You left me!!";
 })
 
-// mirror 
-var keyPress = document.getElementById("keypress-input");
-keyPress.addEventListener("keypress", function(){
-	out.innerHTML = keyPress.value;
+var keyPress = document.getElementById("keypress-input ");
+keyPress.addEventListener("keypress-input ", function() {
+    out.innerHTML = keyPress.value;
 })
-// change styles
-btnColor.addEventListener("click", function(){
-	guineaPig.style.color = "blue";
+
+btnColor.addEventListener("click", function() {
+    guineaPig.style.color = "blue";
 })
-btnLarge.addEventListener("click", function(){
-	guineaPig.style.fontSize = "xx-large";
+btnLarge.addEventListener("click", function() {
+    guineaPig.style.fontSize = "xx-large";
 })
-btnBorder.addEventListener("click", function(){
-	guineaPig.style.border = "1px solid black";
+btnBorder.addEventListener("click", function() {
+    guineaPig.style.border = "1px solid black";
 })
-btnRounding.addEventListener("click", function(){
-	guineaPig.style.borderRadius = "10px";
+btnRounding.addEventListener("click", function() {
+    guineaPig.style.borderRadius = "10px";
 })
