@@ -1,13 +1,12 @@
-/*Change first word*/
 .article-section:first-of-type {
-	font-weight: bold;
+    font-weight: bold;
 }
-/*Change last word*/
+
 .article-section:last-of-type {
-	font-weight: bold;
-	font-style: italic;
+    font-weight: bold;
+    font-style: italic;
 }
-/*Change button display*/
+
 button {
-	display: block;
+    display: block;
 }
